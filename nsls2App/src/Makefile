@@ -21,9 +21,9 @@ PROD_LIBS += caPutLog
 COMM_DBD += caPutLog.dbd
 endif
 
+
 #### Stream IOC
 PROD_IOC = streamApp
-# nsls2.dbd will be created and installed
 DBD += streamApp.dbd
 
 streamApp_SRCS += streamApp_registerRecordDeviceDriver.cpp
@@ -33,6 +33,7 @@ streamApp_SRCS += devtimediff.c
 streamApp_SRCS += TimeStamp.c
 streamApp_SRCS += timedbuffer.c
 streamApp_SRCS += versionid.c
+
 
 streamApp_DBD += $(COMM_DBD)
 streamApp_DBD += wfcalc.dbd
@@ -69,4 +70,4 @@ endif
 versionID.h:
 	echo "#define VERSIONID \"$(REV)\"" > $@
 
-versionid.c: versionID.h
+../versionid.c: versionID.h
