@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>FS725 Rb Source</name>
+  <macros>
+    <DEV>CLA-C16-TIM-OSC-01:</DEV>
+  </macros>
+  <width>1200</width>
+  <height>500</height>
+  <widget type="group" version="2.0.0">
+    <y>90</y>
+    <width>1200</width>
+    <height>400</height>
+    <style>2</style>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(DEV)SN-Sts</pv_name>
+      <x>159</x>
+      <y>49</y>
+      <width>210</width>
+      <height>30</height>
+      <format>4</format>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Device ID</text>
+      <x>19</x>
+      <y>49</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Frequency Lock</text>
+      <x>19</x>
+      <y>249</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(DEV)E:Synth-I</pv_name>
+      <x>159</x>
+      <y>249</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(DEV)T:Lamp-I</pv_name>
+      <x>159</x>
+      <y>209</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Lamp Temp</text>
+      <x>19</x>
+      <y>209</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Cell Temp</text>
+      <x>19</x>
+      <y>169</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>$(DEV)T:Cell-I</pv_name>
+      <x>159</x>
+      <y>169</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Crystal Temp</text>
+      <x>19</x>
+      <y>129</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>$(DEV)T:Crystal-I</pv_name>
+      <x>159</x>
+      <y>129</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>CaseTemp</text>
+      <x>19</x>
+      <y>89</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(DEV)T:Case-I</pv_name>
+      <x>159</x>
+      <y>89</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>1PPS</text>
+      <x>449</x>
+      <y>9</y>
+      <width>140</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Status</text>
+      <x>19</x>
+      <y>9</y>
+      <width>140</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>1PPS Output/Input Delta</text>
+      <x>449</x>
+      <y>129</y>
+      <width>190</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(DEV)K:Tag-I</pv_name>
+      <x>649</x>
+      <y>129</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>10MHz Error Term</text>
+      <x>19</x>
+      <y>289</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(DEV)10MHz:Err-I</pv_name>
+      <x>159</x>
+      <y>289</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>1PPS Output Delay</text>
+      <x>449</x>
+      <y>169</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(DEV)PPS-Delta-SP</pv_name>
+      <x>649</x>
+      <y>169</y>
+      <width>210</width>
+      <height>30</height>
+      <format>0</format>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <maximum>1.0E9</maximum>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_14</name>
+      <text>Output Select</text>
+      <x>449</x>
+      <y>249</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(DEV)LockMode-Sel</pv_name>
+      <x>649</x>
+      <y>249</y>
+      <width>210</width>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_21</name>
+      <text>Time Constant (Hrs)</text>
+      <x>449</x>
+      <y>289</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Text Update_28</name>
+      <pv_name>$(DEV)PPS:Gain-Sel</pv_name>
+      <x>649</x>
+      <y>289</y>
+      <width>210</width>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <text>PLL Control</text>
+      <x>449</x>
+      <y>209</y>
+      <width>140</width>
+      <height>30</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Text Update_20</name>
+      <pv_name>$(DEV)PPS:PLL-Sel</pv_name>
+      <x>649</x>
+      <y>209</y>
+      <width>210</width>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor</name>
+      <pv_name>$(DEV)Sts:5-Sts_</pv_name>
+      <x>899</x>
+      <y>129</y>
+      <width>250</width>
+      <height>240</height>
+      <horizontal>false</horizontal>
+      <labels>
+        <text>PLL Disabled</text>
+        <text>&lt; 256 Good 1PPS Inputs</text>
+        <text>PLL Active</text>
+        <text>&gt; 256 Bad 1PPS Inputs</text>
+        <text>Excessive Time Interval</text>
+        <text>PLL Restarted</text>
+        <text>F Control Saturated</text>
+        <text>No 1PPS input</text>
+      </labels>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_25</name>
+      <text>Status</text>
+      <x>449</x>
+      <y>49</y>
+      <width>190</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_22</name>
+      <pv_name>$(DEV)PPS:Sync-RB</pv_name>
+      <x>649</x>
+      <y>49</y>
+      <width>210</width>
+      <height>30</height>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(DEV)PPS:Sync-RB</pv_name>
+      <x>899</x>
+      <y>49</y>
+      <width>30</width>
+      <height>30</height>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+    </widget>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <x>1410</x>
+    <y>1205</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <width>1200</width>
+    <height>90</height>
+    <line_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>FS725</text>
+    <x>30</x>
+    <y>20</y>
+    <width>403</width>
+    <height>65</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>reset</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(DEV)Rst-Cmd</pv_name>
+        <value>1</value>
+        <description>Reset Device</description>
+      </action>
+    </actions>
+    <text>Reset Device</text>
+    <x>1020</x>
+    <y>20</y>
+    <width>160</width>
+    <height>50</height>
+    <tooltip>$(actions)</tooltip>
+    <show_confirm_dialog>true</show_confirm_dialog>
+  </widget>
+</display>
