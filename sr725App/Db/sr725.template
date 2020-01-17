@@ -751,20 +751,21 @@ record(calc, "$(P)K:Tag-I") {
 	field(HOPR, "500e6")
 	field(LOPR, "-500e6")
 	field( EGU, "ns")
-	field(FLNK, "$(P)PPS:Sync-RB")
+	field(FLNK, "$(P)PPS:Sync-Calc")
 }
 
-record(calc, "$(P)PPS:SyncCalc-RB"){
+record(calc, "$(P)PPS:Sync-Calc"){
 	field(DESC, "1PPS Sync Status Calc")
 	field(INPA, "$(P)K:Tag-I")
 	field(INPB, "$(P)Sts:5-Sts_")
-	field(CALC, "(A<=1000 && A>=-1000 && ((B&255)=4))?1:0")
+	field(INPC, "$(P)PPS-Delta-SP")
+	field(CALC, "((A+C)<=1000 && (A+C)>=-1000 && (B=4))?1:0")
 	field(FLNK, "$(P)PPS:Sync-RB")
 }
 
 record(bi, "$(P)PPS:Sync-RB"){
 	field(DESC, "1PPS Sync Status")
-	field(INP, "$(P)PPS:SyncCalc-RB")
+	field(INP, "$(P)PPS:Sync-Calc")
 	field(DTYP, "Soft Channel")
 	field(ZNAM, "1PPS Not Synced")
 	field(ONAM, "1PPS Synced")
