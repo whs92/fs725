@@ -5,10 +5,10 @@ record(stringin, "$(P)ID-Sts") {
 	field(DESC, "Firmware ID")
 	field(DTYP, "stream")
 	field( INP, "@sr725.proto getVal(ID,s) $(PORT)")
-	field(FLNK, "$(P):SN-Sts")
+	field(FLNK, "$(P)SN-Sts")
 }
 
-record(longin, "$(P):SN-Sts") {
+record(longin, "$(P)SN-Sts") {
 	field(DESC, "Serial num.")
 	field(DTYP, "stream")
 	field( INP, "@sr725.proto getVal(SN,i) $(PORT)")
@@ -369,7 +369,7 @@ record(ai, "$(P)PPS:StabSave-RB") {
 
 record(mbbiDirect, "$(P)Sts:1-Sts_") {
 	field(DESC, "Supply and Lamp status")
-	field(SCAN, "10 second")
+	field(SCAN, "1 second")
 	field(DTYP, "stream")
 	field( INP, "@sr725.proto getStatus($(P)) $(PORT)")
 	field(PINI, "YES")
@@ -751,4 +751,35 @@ record(calc, "$(P)K:Tag-I") {
 	field(HOPR, "500e6")
 	field(LOPR, "-500e6")
 	field( EGU, "ns")
+	field(FLNK, "$(P)PPS:Sync-RB")
 }
+
+record(calc, "$(P)PPS:SyncCalc-RB"){
+	field(DESC, "1PPS Sync Status Calc")
+	field(INPA, "$(P)K:Tag-I")
+	field(INPB, "$(P)Sts:5-Sts_")
+	field(CALC, "(A<=1000 && A>=-1000 && ((B&255)=4))?1:0")
+	field(FLNK, "$(P)PPS:Sync-RB")
+}
+
+record(bi, "$(P)PPS:Sync-RB"){
+	field(DESC, "1PPS Sync Status")
+	field(INP, "$(P)PPS:SyncCalc-RB")
+	field(DTYP, "Soft Channel")
+	field(ZNAM, "1PPS Not Synced")
+	field(ONAM, "1PPS Synced")
+}
+	
+	
+## Place Pulse Settings
+
+record(longout, "$(P)PPS-Delta-SP"){
+	field(DESC, "1PPS Delta from input")
+	field(EGU, "nS")
+	field(DTYP, "stream")
+	field(OUT, "@sr725.proto setVal(PP,i) $(PORT)")
+}
+	
+
+
+

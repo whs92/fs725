@@ -26,7 +26,7 @@ setVal {
 
 getStatus {
 	out "ST?";
-	in "%u,%(\$1Sts:2-Sts_.VAL)u,%(\$1Sts:3-Sts_.VAL)u,%(\$1Sts:4-Sts_.VAL)u,%(\$1Sts:5-Sts_.VAL)u,%(\$1Sts:6-Sts_.VAL)u";
+	in "%(\$1Sts:1-Sts_.VAL)u,%(\$1Sts:2-Sts_.VAL)u,%(\$1Sts:3-Sts_.VAL)u,%(\$1Sts:4-Sts_.VAL)u,%(\$1Sts:5-Sts_.VAL)u,%(\$1Sts:6-Sts_.VAL)u";
 }
 
 getSig {

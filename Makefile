@@ -12,10 +12,10 @@ $(foreach dir, $(filter-out configure,$(DIRS)),$(eval $(call DIR_template,$(dir)
 
 iocBoot_DEPEND_DIRS += $(filter %App,$(DIRS))
 
-scandiApp_DEPEND_DIRS += nsls2App
-HPI6016App_DEPEND_DIRS += nsls2App
-limiterAutoTestApp_DEPEND_DIRS += nsls2App
-egunPermitApp_DEPEND_DIRS += nsls2App
+#scandiApp_DEPEND_DIRS += nsls2App
+#HPI6016App_DEPEND_DIRS += nsls2App
+#limiterAutoTestApp_DEPEND_DIRS += nsls2App
+#egunPermitApp_DEPEND_DIRS += nsls2App
 
 include $(TOP)/configure/RULES_TOP
 

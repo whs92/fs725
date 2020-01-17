@@ -1,8 +1,0 @@
-DEVIOCSTATS=/home/jhlee/epics_env/epics-modules/iocStats
-AUTOSAVE=/home/jhlee/epics_env/epics-modules/autosave
-ASYN=/home/jhlee/epics_env/epics-modules/asyn
-STREAM=/home/jhlee/epics_env/epics-modules/stream
-CALC=/home/jhlee/epics_env/epics-modules/calc
-SSCAN=/home/jhlee/epics_env/epics-modules/sscan
-# EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/jhlee/epics_env/epics-base

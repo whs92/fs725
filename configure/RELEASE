@@ -25,6 +25,7 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 -include $(TOP)/../RELEASE.local
 -include $(TOP)/configure/RELEASE.local
 
+SUPPORT=/home/controls/prod/R3.14.12.5/support
 
 # Optional Modules
 # Commenting out any line will prevent dependent targets
@@ -33,15 +34,16 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #DEVLIB2=
 
 #CAPUTLOG=$(EPICS_BASE)
-#AUTOSAVE=/home/jhlee/epics_env/epics-modules/autosave
+
 
 # Required Modules
 # These modules must be present
 
-#DEVIOCSTATS=/home/jhlee/epics_env/epics-modules/iocStats
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-15dl1
 
-#ASYN=/home/jhlee/epics_env/epics-modules/asyn
-#STREAM=/home/jhlee/epics_env/epics-modules/stream
-
+ASYN=$(SUPPORT)/asyn/4-26
+STREAM=$(SUPPORT)/streamDevice/2-6
+#STREAM=/home/jgc87821/StreamDevice
+#STREAM=/home/controls/work/R3.14.12.5/support/streamDevice/
 # EPICS_BASE usually appears last so other apps can override stuff:
-#EPICS_BASE=/home/jhlee/epics_env/epics-base
+EPICS_BASE=/home/epics/R3.14.12.5/base

@@ -4,7 +4,7 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
 PROTO += sr725.proto
-DB += sr725.db
+DB += sr725.template
 
 
 include $(TOP)/configure/RULES
