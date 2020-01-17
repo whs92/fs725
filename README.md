@@ -4,9 +4,6 @@
 # Original Author
 * Michael Davidsaver https://github.com/mdavidsaver
 
-# Current Maintainer
-* Jeong Han Lee, under the original author permission.
-
 
 # Hardware
 * http://www.thinksrs.com/products/FS725.htm
